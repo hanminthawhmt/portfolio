@@ -30,19 +30,22 @@
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#project" onclick="toggleMenu()">Project</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Project</a></li>
           <li><a href="#about" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Han Min's Profile Picture" />
+        <img
+          src="./assets/my-profile-pic.png"
+          alt="Han Min's Profile Picture"
+        />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Han Min</h1>
-        <p class="section__text__p2">Flutter Developer</p>
+        <p class="section__text__p2" id="typing-text"></p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -137,7 +140,7 @@
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Mobile App Development</h2>
             <div class="article-container">
               <article>
                 <img
@@ -146,7 +149,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>HTML</h3>
+                  <h3>Flutter</h3>
                   <p>Experienced</p>
                 </div>
               </article>
@@ -157,7 +160,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>CSS</h3>
+                  <h3>Dart</h3>
                   <p>Experienced</p>
                 </div>
               </article>
@@ -168,7 +171,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>SASS</h3>
+                  <h3>State Mangement (Provider, Bloc)</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
@@ -179,36 +182,25 @@
                   class="icon"
                 />
                 <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
+                  <h3>Firebase (Auth, Firestore, FCM, Storage)</h3>
                   <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>RestAPI Integration</h3>
+                  <p>Experienced</p>
                 </div>
               </article>
             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
                 <img
@@ -217,8 +209,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
+                  <h3>Node.js</h3>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
@@ -228,7 +220,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Node JS</h3>
+                  <h3>Express.js</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
@@ -250,7 +242,67 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Git</h3>
+                  <h3>PostgreSQL / MySQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Authentication & JWT</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Web Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML & CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React.js (for dashboards)</h3>
+                  <p>Basic–Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI / Tailwind CSS</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
@@ -270,11 +322,15 @@
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container color-container">
+          <!-- SabaiJob Project -->
+          <div
+            class="details-container color-container clickable"
+            onclick="openModal('modalSabaiJob')"
+          >
             <div class="article-container">
               <img
                 src="./assets/IMG_1482.JPG"
-                alt="Project 1"
+                alt="SabaiJob Project"
                 class="project-img"
               />
             </div>
@@ -282,113 +338,146 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="event.stopPropagation(); location.href='https://github.com/orgs/SabaiJob/repositories'"
               >
                 Github Repo
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://play.google.com/store/apps/details?id=com.sabaijob.sabai_app&hl=en'"
+                onclick="event.stopPropagation(); location.href='https://play.google.com/store/apps/details?id=com.sabaijob.sabai_app&hl=en'"
               >
                 Live Demo
               </button>
             </div>
+            <div class="project-click-hint">Click for details</div>
           </div>
-          <div class="details-container color-container">
+
+          <!-- Ultimate Tic-Tac-Toe Project -->
+          <div
+            class="details-container color-container clickable"
+            onclick="openModal('modalTicTacToe')"
+          >
             <div class="article-container">
               <img
                 src="./assets/IMG_1520.JPG"
-                alt="Project 3"
+                alt="Ultimate Tic-Tac-Toe Project"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Ultimate Tic-Tac-Toe</h2>
+            <h2 class="experience-sub-title project-title">
+              Ultimate Tic-Tac-Toe
+            </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/hanminthawhmt/ultimate-tic-tac-toe'"
+                onclick="event.stopPropagation(); location.href='https://github.com/hanminthawhmt/ultimate-tic-tac-toe'"
               >
                 Github Repo
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://lab-cd-mcukjy5pla-uc.a.run.app'"
+                onclick="event.stopPropagation(); location.href='https://lab-cd-mcukjy5pla-uc.a.run.app'"
               >
                 Live Demo
               </button>
             </div>
+            <div class="project-click-hint">Click for details</div>
           </div>
-          <div class="details-container color-container">
+
+          <!-- Hospital Management System Project -->
+          <div
+            class="details-container color-container clickable"
+            onclick="openModal('modalHospital')"
+          >
             <div class="article-container">
               <img
                 src="./assets/IMG_1524.JPG"
-                alt="Project 2"
+                alt="Hospital Management System Project"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Hospital Management System</h2>
+            <h2 class="experience-sub-title project-title">
+              Hospital Management System
+            </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Techies-SE'"
+                onclick="event.stopPropagation(); location.href='https://github.com/Techies-SE'"
               >
                 Github Repo
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="event.stopPropagation(); location.href='#'"
               >
                 Live Demo
               </button>
             </div>
+            <div class="project-click-hint">Click for details</div>
           </div>
-          <div class="details-container color-container">
+
+          <!-- Restaurant Management App Project -->
+          <div
+            class="details-container color-container clickable"
+            onclick="openModal('modalRestaurant')"
+          >
             <div class="article-container">
               <img
                 src="./assets/IMG_1481.JPG"
-                alt="Project 2"
+                alt="Restaurant Management App Project"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Restaurant Management Mobile App</h2>
+            <h2 class="experience-sub-title project-title">
+              Restaurant Management Mobile App
+            </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/hanminthawhmt/restaurant-management-mobile-app'"
+                onclick="event.stopPropagation(); location.href='https://github.com/hanminthawhmt/restaurant-management-mobile-app'"
               >
                 Github Repo
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="event.stopPropagation(); location.href='#'"
               >
                 Live Demo
               </button>
             </div>
+            <div class="project-click-hint">Click for details</div>
           </div>
-          <div class="details-container color-container">
+
+          <!-- Smart Campus App Project -->
+          <div
+            class="details-container color-container clickable"
+            onclick="openModal('modalCampus')"
+          >
             <div class="article-container">
               <img
                 src="./assets/IMG_1523.JPG"
-                alt="Project 2"
+                alt="Smart Campus App Project"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Smart Campus Mobile App</h2>
+            <h2 class="experience-sub-title project-title">
+              Smart Campus Mobile App
+            </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/hanminthawhmt/smart_campus_mobile_app'"
+                onclick="event.stopPropagation(); location.href='https://github.com/hanminthawhmt/smart_campus_mobile_app'"
               >
                 Github Repo
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="event.stopPropagation(); location.href='#'"
               >
                 Live Demo
               </button>
             </div>
+            <div class="project-click-hint">Click for details</div>
           </div>
         </div>
       </div>
@@ -438,6 +527,573 @@
       </nav>
       <p>Copyright &#169; 2025 Han Min. All Rights Reserved.</p>
     </footer>
+
+    <!-- Project Modals -->
+
+    <!-- SabaiJob Modal -->
+    <div id="modalSabaiJob" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('modalSabaiJob')"
+          >&times;</span
+        >
+        <img
+          src="./assets/IMG_1482.JPG"
+          alt="SabaiJob Project Details"
+          class="modal-project-image"
+        />
+        <h2 class="modal-title">SabaiJob - Job Platform</h2>
+        <div class="modal-tech-stack">
+          <span class="modal-tech-tag">Flutter</span>
+          <span class="modal-tech-tag">Dart</span>
+          <span class="modal-tech-tag">Firebase</span>
+          <span class="modal-tech-tag">Node.js</span>
+          <span class="modal-tech-tag">PostgreSQL</span>
+          <span class="modal-tech-tag">JWT Auth</span>
+          <span class="modal-tech-tag">Real-time Chat</span>
+        </div>
+        <div class="modal-description">
+          <strong>Overview:</strong><br />
+          SabaiJob is a comprehensive mobile job platform designed specifically
+          for the Thai market. The app connects job seekers with employers
+          through an intuitive and feature-rich interface, making job searching
+          and recruitment more efficient and accessible.
+
+          <br /><br /><strong>Key Features:</strong>
+          <ul>
+            <li>
+              <strong>Real-time Messaging:</strong> Built-in chat system for
+              seamless communication between employers and candidates
+            </li>
+            <li>
+              <strong>Smart Job Matching:</strong> Advanced algorithms that
+              match candidates with relevant job opportunities based on skills,
+              experience, and location
+            </li>
+            <li>
+              <strong>Integrated Payments:</strong> Secure payment system for
+              premium job postings and featured listings
+            </li>
+            <li>
+              <strong>Multi-language Support:</strong> Full Thai and English
+              language support for broader accessibility
+            </li>
+            <li>
+              <strong>Push Notifications:</strong> Real-time alerts for new job
+              matches, messages, and application updates
+            </li>
+            <li>
+              <strong>Portfolio Management:</strong> Comprehensive user profiles
+              with document uploads and skill showcases
+            </li>
+            <li>
+              <strong>Admin Dashboard:</strong> Complete platform management
+              tools for monitoring and analytics
+            </li>
+          </ul>
+
+          <br /><strong>Technical Implementation:</strong>
+          <ul>
+            <li>
+              <strong>Frontend:</strong> Flutter framework for cross-platform
+              mobile development with native performance
+            </li>
+            <li>
+              <strong>Backend:</strong> Node.js with Express.js for scalable API
+              development
+            </li>
+            <li>
+              <strong>Database:</strong> PostgreSQL with optimized queries and
+              indexing for fast data retrieval
+            </li>
+            <li>
+              <strong>Authentication:</strong> JWT-based secure authentication
+              with Firebase integration
+            </li>
+            <li>
+              <strong>Real-time Features:</strong> WebSocket implementation for
+              instant messaging and notifications
+            </li>
+            <li>
+              <strong>Cloud Infrastructure:</strong> Deployed on Google Cloud
+              Platform for reliability and scalability
+            </li>
+          </ul>
+
+          <br /><strong>Project Impact:</strong><br />
+          Successfully launched on Google Play Store with active user base. The
+          platform has facilitated numerous job placements and received positive
+          feedback for its user-friendly interface and efficient matching
+          system.
+        </div>
+        <div class="modal-btn-container">
+          <a
+            href="https://github.com/orgs/SabaiJob/repositories"
+            class="modal-btn modal-btn-primary"
+            target="_blank"
+          >
+            View Source Code
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.sabaijob.sabai_app&hl=en"
+            class="modal-btn modal-btn-secondary"
+            target="_blank"
+          >
+            Try Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ultimate Tic-Tac-Toe Modal -->
+    <div id="modalTicTacToe" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('modalTicTacToe')"
+          >&times;</span
+        >
+        <img
+          src="./assets/IMG_1520.JPG"
+          alt="Ultimate Tic-Tac-Toe Project Details"
+          class="modal-project-image"
+        />
+        <h2 class="modal-title">Ultimate Tic-Tac-Toe</h2>
+        <div class="modal-tech-stack">
+          <span class="modal-tech-tag">React</span>
+          <span class="modal-tech-tag">JavaScript</span>
+          <span class="modal-tech-tag">CSS3</span>
+          <span class="modal-tech-tag">WebSocket</span>
+          <span class="modal-tech-tag">Node.js</span>
+          <span class="modal-tech-tag">Game AI</span>
+        </div>
+        <div class="modal-description">
+          <strong>Overview:</strong><br />
+          An advanced and engaging version of the classic tic-tac-toe game
+          featuring multiple game modes, AI opponents with varying difficulty
+          levels, and real-time multiplayer functionality. This project
+          showcases game development skills and algorithm implementation.
+
+          <br /><br /><strong>Game Features:</strong>
+          <ul>
+            <li>
+              <strong>Multiple Game Modes:</strong> Classic 3x3, Ultimate (9
+              boards), and custom grid sizes
+            </li>
+            <li>
+              <strong>AI Opponents:</strong> Three difficulty levels - Easy,
+              Medium, and Hard with different strategies
+            </li>
+            <li>
+              <strong>Online Multiplayer:</strong> Real-time gameplay with
+              WebSocket implementation
+            </li>
+            <li>
+              <strong>Visual Effects:</strong> Smooth animations, particle
+              effects, and sound feedback
+            </li>
+            <li>
+              <strong>Statistics Tracking:</strong> Win/loss records, streaks,
+              and performance analytics
+            </li>
+            <li>
+              <strong>Responsive Design:</strong> Optimized for desktop, tablet,
+              and mobile devices
+            </li>
+            <li>
+              <strong>Theme Customization:</strong> Multiple visual themes and
+              color schemes
+            </li>
+          </ul>
+
+          <br /><strong>Technical Implementation:</strong>
+          <ul>
+            <li>
+              <strong>Frontend:</strong> React with hooks for state management
+              and component lifecycle
+            </li>
+            <li>
+              <strong>Game Logic:</strong> Minimax algorithm with alpha-beta
+              pruning for AI decision making
+            </li>
+            <li>
+              <strong>Real-time Communication:</strong> WebSocket implementation
+              for multiplayer functionality
+            </li>
+            <li>
+              <strong>Animations:</strong> CSS transitions and keyframe
+              animations for smooth gameplay
+            </li>
+            <li>
+              <strong>Data Persistence:</strong> Local storage for game
+              preferences and statistics
+            </li>
+            <li>
+              <strong>Performance Optimization:</strong> Memoization and
+              efficient re-rendering strategies
+            </li>
+          </ul>
+
+          <br /><strong>Learning Outcomes:</strong><br />
+          This project enhanced my understanding of game development principles,
+          algorithm optimization, real-time web technologies, and user
+          experience design for interactive applications.
+        </div>
+        <div class="modal-btn-container">
+          <a
+            href="https://github.com/hanminthawhmt/ultimate-tic-tac-toe"
+            class="modal-btn modal-btn-primary"
+            target="_blank"
+          >
+            View Source Code
+          </a>
+          <a
+            href="https://lab-cd-mcukjy5pla-uc.a.run.app"
+            class="modal-btn modal-btn-secondary"
+            target="_blank"
+          >
+            Play Game
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hospital Management System Modal -->
+    <div id="modalHospital" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('modalHospital')"
+          >&times;</span
+        >
+        <img
+          src="./assets/IMG_1524.JPG"
+          alt="Hospital Management System Project Details"
+          class="modal-project-image"
+        />
+        <h2 class="modal-title">Hospital Management System</h2>
+        <div class="modal-tech-stack">
+          <span class="modal-tech-tag">Flutter</span>
+          <span class="modal-tech-tag">Node.js</span>
+          <span class="modal-tech-tag">PostgreSQL</span>
+          <span class="modal-tech-tag">AI/ML</span>
+          <span class="modal-tech-tag">Express.js</span>
+          <span class="modal-tech-tag">JWT Auth</span>
+        </div>
+        <div class="modal-description">
+          <strong>Overview:</strong><br />
+          A comprehensive healthcare management platform that streamlines
+          hospital operations through digital solutions. The system integrates
+          patient management, appointment scheduling, inventory tracking, and
+          AI-powered health recommendations to improve healthcare delivery
+          efficiency.
+
+          <br /><br /><strong>Core Features:</strong>
+          <ul>
+            <li>
+              <strong>Patient Management:</strong> Complete electronic health
+              records with medical history tracking
+            </li>
+            <li>
+              <strong>Appointment System:</strong> Smart scheduling with
+              conflict resolution and automated reminders
+            </li>
+            <li>
+              <strong>Inventory Management:</strong> Real-time tracking of
+              medical supplies and equipment
+            </li>
+            <li>
+              <strong>AI Health Recommendations:</strong> Machine learning
+              algorithms for diagnosis assistance and treatment suggestions
+            </li>
+            <li>
+              <strong>Multi-role Access:</strong> Separate portals for doctors,
+              patients, nurses, and administrators
+            </li>
+            <li>
+              <strong>Billing Integration:</strong> Automated invoice generation
+              and payment processing
+            </li>
+            <li>
+              <strong>Report Generation:</strong> Comprehensive analytics and
+              reporting tools
+            </li>
+          </ul>
+
+          <br /><strong>Technical Architecture:</strong>
+          <ul>
+            <li>
+              <strong>Mobile App:</strong> Flutter-based cross-platform
+              application for patients and staff
+            </li>
+            <li>
+              <strong>Backend API:</strong> Node.js with Express.js for scalable
+              server-side operations
+            </li>
+            <li>
+              <strong>Database:</strong> PostgreSQL with complex relational
+              schemas for medical data
+            </li>
+            <li>
+              <strong>AI Integration:</strong> Python-based machine learning
+              models for health predictions
+            </li>
+            <li>
+              <strong>Security:</strong> HIPAA-compliant data handling with
+              encrypted storage and transmission
+            </li>
+            <li>
+              <strong>Real-time Features:</strong> WebSocket implementation for
+              live updates and notifications
+            </li>
+          </ul>
+
+          <br /><strong>Project Impact:</strong><br />
+          Developed as part of a team project, this system demonstrates the
+          application of technology in healthcare to improve patient care and
+          operational efficiency. The AI recommendation system achieved 85%
+          accuracy in preliminary testing.
+        </div>
+        <div class="modal-btn-container">
+          <a
+            href="https://github.com/Techies-SE"
+            class="modal-btn modal-btn-primary"
+            target="_blank"
+          >
+            View Source Code
+          </a>
+          <a href="#" class="modal-btn modal-btn-secondary">
+            Demo Coming Soon
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restaurant Management App Modal -->
+    <div id="modalRestaurant" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('modalRestaurant')"
+          >&times;</span
+        >
+        <img
+          src="./assets/IMG_1481.JPG"
+          alt="Restaurant Management App Project Details"
+          class="modal-project-image"
+        />
+        <h2 class="modal-title">Restaurant Management Mobile App</h2>
+        <div class="modal-tech-stack">
+          <span class="modal-tech-tag">Flutter</span>
+          <span class="modal-tech-tag">Dart</span>
+          <span class="modal-tech-tag">Firebase</span>
+          <span class="modal-tech-tag">Stripe API</span>
+          <span class="modal-tech-tag">Google Maps</span>
+        </div>
+        <div class="modal-description">
+          <strong>Overview:</strong><br />
+          A comprehensive mobile application designed to digitize restaurant
+          operations from order management to delivery tracking. The app serves
+          both restaurant staff and customers, providing a seamless dining and
+          management experience.
+
+          <br /><br /><strong>Key Features:</strong>
+          <ul>
+            <li>
+              <strong>Digital Menu Management:</strong> Dynamic menu updates
+              with photos, descriptions, and pricing
+            </li>
+            <li>
+              <strong>Order Processing:</strong> Real-time order management with
+              kitchen display system integration
+            </li>
+            <li>
+              <strong>Payment Integration:</strong> Multiple payment options
+              including digital wallets and card payments
+            </li>
+            <li>
+              <strong>Table Management:</strong> QR code-based table service and
+              reservation system
+            </li>
+            <li>
+              <strong>Delivery Tracking:</strong> GPS-based real-time delivery
+              tracking for customers
+            </li>
+            <li>
+              <strong>Inventory Alerts:</strong> Automated notifications for
+              low-stock items
+            </li>
+            <li>
+              <strong>Analytics Dashboard:</strong> Sales reports, popular items
+              analysis, and performance metrics
+            </li>
+          </ul>
+
+          <br /><strong>Technical Features:</strong>
+          <ul>
+            <li>
+              <strong>Cross-platform Development:</strong> Single codebase for
+              both iOS and Android using Flutter
+            </li>
+            <li>
+              <strong>Real-time Database:</strong> Firebase Firestore for live
+              order updates and synchronization
+            </li>
+            <li>
+              <strong>Payment Processing:</strong> Secure integration with
+              Stripe API for transaction handling
+            </li>
+            <li>
+              <strong>Location Services:</strong> Google Maps integration for
+              delivery tracking and restaurant locator
+            </li>
+            <li>
+              <strong>Push Notifications:</strong> Firebase Cloud Messaging for
+              order updates and promotions
+            </li>
+            <li>
+              <strong>Offline Capability:</strong> Local data caching for
+              seamless operation during network issues
+            </li>
+          </ul>
+
+          <br /><strong>User Experience:</strong><br />
+          The app features an intuitive interface designed for both tech-savvy
+          and non-technical users. The staff interface prioritizes efficiency
+          and speed, while the customer interface focuses on visual appeal and
+          ease of navigation.
+        </div>
+        <div class="modal-btn-container">
+          <a
+            href="https://github.com/hanminthawhmt/restaurant-management-mobile-app"
+            class="modal-btn modal-btn-primary"
+            target="_blank"
+          >
+            View Source Code
+          </a>
+          <a href="#" class="modal-btn modal-btn-secondary">
+            Demo Coming Soon
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Smart Campus App Modal -->
+    <div id="modalCampus" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('modalCampus')"
+          >&times;</span
+        >
+        <img
+          src="./assets/IMG_1523.JPG"
+          alt="Smart Campus App Project Details"
+          class="modal-project-image"
+        />
+        <h2 class="modal-title">Smart Campus Mobile App</h2>
+        <div class="modal-tech-stack">
+          <span class="modal-tech-tag">Flutter</span>
+          <span class="modal-tech-tag">Firebase</span>
+          <span class="modal-tech-tag">Node.js</span>
+          <span class="modal-tech-tag">PostgreSQL</span>
+          <span class="modal-tech-tag">QR Scanner</span>
+          <span class="modal-tech-tag">Push Notifications</span>
+        </div>
+        <div class="modal-description">
+          <strong>Overview:</strong><br />
+          A comprehensive smart campus application designed to enhance the
+          university experience for students, faculty, and staff. The app
+          integrates various campus services into a single platform, making
+          campus life more convenient and connected.
+
+          <br /><br /><strong>Key Features:</strong>
+          <ul>
+            <li>
+              <strong>Digital Student ID:</strong> QR code-based identification
+              for library, cafeteria, and building access
+            </li>
+            <li>
+              <strong>Class Scheduling:</strong> Integrated timetable with
+              classroom locations and instructor information
+            </li>
+            <li>
+              <strong>Campus Navigation:</strong> Interactive campus map with
+              indoor navigation and facility locator
+            </li>
+            <li>
+              <strong>Event Management:</strong> Campus events calendar with
+              registration and notification system
+            </li>
+            <li>
+              <strong>Food Services:</strong> Cafeteria menus, pre-ordering, and
+              nutritional information
+            </li>
+            <li>
+              <strong>Library Integration:</strong> Book search, reservation,
+              and availability checking
+            </li>
+            <li>
+              <strong>Announcement System:</strong> Real-time campus-wide and
+              department-specific notifications
+            </li>
+            <li>
+              <strong>Student Services:</strong> Access to grades, transcripts,
+              and administrative services
+            </li>
+          </ul>
+
+          <br /><strong>Technical Implementation:</strong>
+          <ul>
+            <li>
+              <strong>Mobile Development:</strong> Flutter framework for
+              consistent cross-platform experience
+            </li>
+            <li>
+              <strong>Backend Services:</strong> Node.js with Express.js for API
+              development and data processing
+            </li>
+            <li>
+              <strong>Database Management:</strong> PostgreSQL for structured
+              data and Firebase for real-time features
+            </li>
+            <li>
+              <strong>QR Code Integration:</strong> Custom QR scanner for
+              various campus authentication needs
+            </li>
+            <li>
+              <strong>Push Notifications:</strong> Firebase Cloud Messaging for
+              timely campus updates
+            </li>
+            <li>
+              <strong>Maps Integration:</strong> Custom indoor mapping solution
+              with GPS coordination
+            </li>
+            <li>
+              <strong>Security:</strong> JWT-based authentication with
+              university SSO integration
+            </li>
+          </ul>
+
+          <br /><strong>User Impact:</strong><br />
+          The app significantly reduced paper waste on campus and improved
+          communication between administration and students. Beta testing showed
+          90% user satisfaction and 40% reduction in administrative queues.
+
+          <br /><strong>Challenges Overcome:</strong>
+          <ul>
+            <li>Integration with legacy university systems and databases</li>
+            <li>Offline functionality for areas with poor network coverage</li>
+            <li>Scalability to handle peak usage during enrollment periods</li>
+            <li>Privacy concerns and FERPA compliance for student data</li>
+          </ul>
+        </div>
+        <div class="modal-btn-container">
+          <a
+            href="https://github.com/hanminthawhmt/smart_campus_mobile_app"
+            class="modal-btn modal-btn-primary"
+            target="_blank"
+          >
+            View Source Code
+          </a>
+          <a href="#" class="modal-btn modal-btn-secondary">
+            Demo Coming Soon
+          </a>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
