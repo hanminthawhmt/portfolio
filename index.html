@@ -31,7 +31,7 @@
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Project</a></li>
-          <li><a href="#about" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
@@ -79,22 +79,13 @@
       <div class="section-container">
         <div class="section__pic-container">
           <img
-            src="./assets/about-pic.png"
+            src="./assets/about-me.JPG"
             alt="Profile Picture"
-            class="about-poc"
+            class="about-pic"
           />
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience Icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div>
+        <div class="about-details-container" id="about-details-container">
+          <div class="about-containers" id="about-containers">
             <div class="details-container">
               <img
                 src="./assets/education.png"
@@ -104,25 +95,25 @@
               <h3>Education</h3>
               <p>B.Eng Bachelors of Engineering<br />Software Engineering</p>
             </div>
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience Icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>Freelance <br />Mobile Developer</p>
+            </div>
           </div>
           <div class="text-container">
             <p>
-              "Hi, I’m Han Min Thaw, Software Engineering student at Mae Fah
-              Luang University with a passion for building user-friendly and
-              impactful applications. I specialize in mobile app development
-              with Flutter and have experience in backend development using
-              Node.js and PostgreSQL.
-              <br />
-              I’ve worked on projects ranging from a smart campus app and a job
-              platform to a healthcare recommendation system that integrates AI
-              with real-world medical workflows. Additionally, I developed Sabai
-              Job as a freelance project, a mobile platform connecting job
-              seekers with employers. Through these experiences, I’ve gained
-              hands-on skills in technical development as well as client
-              collaboration.
-              <br />
-              My goal is to grow as a full-stack developer and contribute to
-              innovative solutions that make people’s lives easier.
+              "Hi, I’m Han Min Thaw — a Software Engineering student working
+              towards becoming a full-stack developer. I specialize in mobile
+              apps with Flutter and backend systems with Node.js and PostgreSQL,
+              and I also have experience with React, API development, and AI
+              integration. From smart campus tools to healthcare platforms and
+              job apps, I build solutions that connect great ideas with real
+              impact.
             </p>
           </div>
         </div>
@@ -323,10 +314,7 @@
       <div class="experience-details-container">
         <div class="about-containers">
           <!-- SabaiJob Project -->
-          <div
-            class="details-container color-container clickable"
-            onclick="openModal('modalSabaiJob')"
-          >
+          <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/IMG_1482.JPG"
@@ -337,26 +325,17 @@
             <h2 class="experience-sub-title project-title">SabaiJob</h2>
             <div class="btn-container">
               <button
-                class="btn btn-color-2 project-btn"
-                onclick="event.stopPropagation(); location.href='https://github.com/orgs/SabaiJob/repositories'"
+                class="btn btn-color-1 project-btn"
+                onclick="event.stopPropagation(); openModal('modalSabaiJob')"
               >
-                Github Repo
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="event.stopPropagation(); location.href='https://play.google.com/store/apps/details?id=com.sabaijob.sabai_app&hl=en'"
-              >
-                Live Demo
+                More Details
               </button>
             </div>
             <div class="project-click-hint">Click for details</div>
           </div>
 
           <!-- Ultimate Tic-Tac-Toe Project -->
-          <div
-            class="details-container color-container clickable"
-            onclick="openModal('modalTicTacToe')"
-          >
+          <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/IMG_1520.JPG"
@@ -369,6 +348,12 @@
             </h2>
             <div class="btn-container">
               <button
+                class="btn btn-color-1 project-btn"
+                onclick="event.stopPropagation(); openModal('modalTicTacToe')"
+              >
+                More Details
+              </button>
+              <!-- <button
                 class="btn btn-color-2 project-btn"
                 onclick="event.stopPropagation(); location.href='https://github.com/hanminthawhmt/ultimate-tic-tac-toe'"
               >
@@ -379,16 +364,13 @@
                 onclick="event.stopPropagation(); location.href='https://lab-cd-mcukjy5pla-uc.a.run.app'"
               >
                 Live Demo
-              </button>
+              </button> -->
             </div>
             <div class="project-click-hint">Click for details</div>
           </div>
 
           <!-- Hospital Management System Project -->
-          <div
-            class="details-container color-container clickable"
-            onclick="openModal('modalHospital')"
-          >
+          <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/IMG_1524.JPG"
@@ -401,6 +383,12 @@
             </h2>
             <div class="btn-container">
               <button
+                class="btn btn-color-1 project-btn"
+                onclick="event.stopPropagation(); openModal('modalHospital')"
+              >
+                More Details
+              </button>
+              <!-- <button
                 class="btn btn-color-2 project-btn"
                 onclick="event.stopPropagation(); location.href='https://github.com/Techies-SE'"
               >
@@ -411,16 +399,13 @@
                 onclick="event.stopPropagation(); location.href='#'"
               >
                 Live Demo
-              </button>
+              </button> -->
             </div>
             <div class="project-click-hint">Click for details</div>
           </div>
 
           <!-- Restaurant Management App Project -->
-          <div
-            class="details-container color-container clickable"
-            onclick="openModal('modalRestaurant')"
-          >
+          <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/IMG_1481.JPG"
@@ -433,6 +418,12 @@
             </h2>
             <div class="btn-container">
               <button
+                class="btn btn-color-1 project-btn"
+                onclick="event.stopPropagation(); openModal('modalRestaurant')"
+              >
+                More Details
+              </button>
+              <!-- <button
                 class="btn btn-color-2 project-btn"
                 onclick="event.stopPropagation(); location.href='https://github.com/hanminthawhmt/restaurant-management-mobile-app'"
               >
@@ -443,16 +434,13 @@
                 onclick="event.stopPropagation(); location.href='#'"
               >
                 Live Demo
-              </button>
+              </button> -->
             </div>
             <div class="project-click-hint">Click for details</div>
           </div>
 
           <!-- Smart Campus App Project -->
-          <div
-            class="details-container color-container clickable"
-            onclick="openModal('modalCampus')"
-          >
+          <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/IMG_1523.JPG"
@@ -465,6 +453,12 @@
             </h2>
             <div class="btn-container">
               <button
+                class="btn btn-color-1 project-btn"
+                onclick="event.stopPropagation(); openModal('modalCampus')"
+              >
+                More Details
+              </button>
+              <!-- <button
                 class="btn btn-color-2 project-btn"
                 onclick="event.stopPropagation(); location.href='https://github.com/hanminthawhmt/smart_campus_mobile_app'"
               >
@@ -475,7 +469,7 @@
                 onclick="event.stopPropagation(); location.href='#'"
               >
                 Live Demo
-              </button>
+              </button> -->
             </div>
             <div class="project-click-hint">Click for details</div>
           </div>
@@ -545,85 +539,54 @@
         <div class="modal-tech-stack">
           <span class="modal-tech-tag">Flutter</span>
           <span class="modal-tech-tag">Dart</span>
-          <span class="modal-tech-tag">Firebase</span>
-          <span class="modal-tech-tag">Node.js</span>
-          <span class="modal-tech-tag">PostgreSQL</span>
-          <span class="modal-tech-tag">JWT Auth</span>
-          <span class="modal-tech-tag">Real-time Chat</span>
+          <span class="modal-tech-tag">Firebase FNC</span>
+          <span class="modal-tech-tag">Push Notifications</span>
         </div>
         <div class="modal-description">
           <strong>Overview:</strong><br />
-          SabaiJob is a comprehensive mobile job platform designed specifically
-          for the Thai market. The app connects job seekers with employers
-          through an intuitive and feature-rich interface, making job searching
-          and recruitment more efficient and accessible.
+          SabaiJob is a mobile platform for Myanmar immigrant workers,
+          connecting them with verified blue-collar job opportunities. The app
+          aims to be easy to use, secure, and tailored to job preferences, while
+          fostering connections with employers, NGOs, and the community. I
+          contributed to the mobile app UI and API integration, ensuring a
+          smooth and responsive experience for users.
 
           <br /><br /><strong>Key Features:</strong>
           <ul>
             <li>
-              <strong>Real-time Messaging:</strong> Built-in chat system for
-              seamless communication between employers and candidates
+              <strong>Job Seekers:</strong> Browse secure and verified job posts
+              tailored to your preferences.
             </li>
             <li>
-              <strong>Smart Job Matching:</strong> Advanced algorithms that
-              match candidates with relevant job opportunities based on skills,
-              experience, and location
+              <strong>Employers & NGOs:</strong> Connect with the workforce and
+              contribute to the community.
             </li>
             <li>
-              <strong>Integrated Payments:</strong> Secure payment system for
-              premium job postings and featured listings
+              <strong>Notifications & Updates:</strong> Stay informed on
+              application status and opportunities
             </li>
             <li>
-              <strong>Multi-language Support:</strong> Full Thai and English
-              language support for broader accessibility
+              <strong>Freemium & Premium Features:</strong> Access to daily
+              limited job posts or unlimited job posts.
             </li>
             <li>
-              <strong>Push Notifications:</strong> Real-time alerts for new job
-              matches, messages, and application updates
-            </li>
-            <li>
-              <strong>Portfolio Management:</strong> Comprehensive user profiles
-              with document uploads and skill showcases
-            </li>
-            <li>
-              <strong>Admin Dashboard:</strong> Complete platform management
-              tools for monitoring and analytics
+              <strong>User-Friendly Design:</strong> Intuitive interface for
+              easy navigation.
             </li>
           </ul>
 
           <br /><strong>Technical Implementation:</strong>
           <ul>
             <li>
-              <strong>Frontend:</strong> Flutter framework for cross-platform
-              mobile development with native performance
-            </li>
-            <li>
-              <strong>Backend:</strong> Node.js with Express.js for scalable API
-              development
-            </li>
-            <li>
-              <strong>Database:</strong> PostgreSQL with optimized queries and
-              indexing for fast data retrieval
-            </li>
-            <li>
-              <strong>Authentication:</strong> JWT-based secure authentication
-              with Firebase integration
-            </li>
-            <li>
-              <strong>Real-time Features:</strong> WebSocket implementation for
-              instant messaging and notifications
-            </li>
-            <li>
-              <strong>Cloud Infrastructure:</strong> Deployed on Google Cloud
-              Platform for reliability and scalability
+              <strong>Mobile App (Flutter):</strong> UI development and API
+              integration
             </li>
           </ul>
 
           <br /><strong>Project Impact:</strong><br />
           Successfully launched on Google Play Store with active user base. The
           platform has facilitated numerous job placements and received positive
-          feedback for its user-friendly interface and efficient matching
-          system.
+          feedback for its user-friendly interface.
         </div>
         <div class="modal-btn-container">
           <a
@@ -660,81 +623,47 @@
           <span class="modal-tech-tag">React</span>
           <span class="modal-tech-tag">JavaScript</span>
           <span class="modal-tech-tag">CSS3</span>
-          <span class="modal-tech-tag">WebSocket</span>
-          <span class="modal-tech-tag">Node.js</span>
-          <span class="modal-tech-tag">Game AI</span>
+          <span class="modal-tech-tag">Spring Boot</span>
+          <span class="modal-tech-tag">Google Cloud</span>
         </div>
         <div class="modal-description">
           <strong>Overview:</strong><br />
-          An advanced and engaging version of the classic tic-tac-toe game
-          featuring multiple game modes, AI opponents with varying difficulty
-          levels, and real-time multiplayer functionality. This project
-          showcases game development skills and algorithm implementation.
+          The Ultimate Tic Tac Toe project is an enhanced version of the
+          traditional game, expanding it into 9 big grids with 9 small grids
+          each (total of 81 cells). It introduces player accounts with sign-up
+          and log-in, while delivering a more complex and strategic experience
+          compared to the classic version.
 
-          <br /><br /><strong>Game Features:</strong>
+          <br /><br /><strong>Key Features:</strong>
           <ul>
             <li>
-              <strong>Multiple Game Modes:</strong> Classic 3x3, Ultimate (9
-              boards), and custom grid sizes
+              <strong>Player Accounts:</strong> Players can sign up (generating
+              a unique ID) or log in with their existing ID.
             </li>
             <li>
-              <strong>AI Opponents:</strong> Three difficulty levels - Easy,
-              Medium, and Hard with different strategies
+              <strong>Game Mechanics:</strong> Classic X vs O gameplay, but
+              expanded to 9×9 nested grids for deeper strategy.
             </li>
             <li>
-              <strong>Online Multiplayer:</strong> Real-time gameplay with
-              WebSocket implementation
+              <strong>Victory Conditions:</strong> Winners are determined by
+              capturing large grids through diagonal, vertical, or horizontal
+              alignments. If no clear winner emerges, the player with more large
+              grids wins; ties are also supported.
             </li>
             <li>
-              <strong>Visual Effects:</strong> Smooth animations, particle
-              effects, and sound feedback
-            </li>
-            <li>
-              <strong>Statistics Tracking:</strong> Win/loss records, streaks,
-              and performance analytics
-            </li>
-            <li>
-              <strong>Responsive Design:</strong> Optimized for desktop, tablet,
-              and mobile devices
-            </li>
-            <li>
-              <strong>Theme Customization:</strong> Multiple visual themes and
-              color schemes
+              <strong>Deployment:</strong> Hosted on Google Cloud for online
+              play
             </li>
           </ul>
 
           <br /><strong>Technical Implementation:</strong>
           <ul>
             <li>
-              <strong>Frontend:</strong> React with hooks for state management
-              and component lifecycle
+              <strong>Backend:</strong> Java Spring Boot (MVC architecture)
             </li>
-            <li>
-              <strong>Game Logic:</strong> Minimax algorithm with alpha-beta
-              pruning for AI decision making
-            </li>
-            <li>
-              <strong>Real-time Communication:</strong> WebSocket implementation
-              for multiplayer functionality
-            </li>
-            <li>
-              <strong>Animations:</strong> CSS transitions and keyframe
-              animations for smooth gameplay
-            </li>
-            <li>
-              <strong>Data Persistence:</strong> Local storage for game
-              preferences and statistics
-            </li>
-            <li>
-              <strong>Performance Optimization:</strong> Memoization and
-              efficient re-rendering strategies
-            </li>
+            <li><strong>Frontend (View):</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Deployment:</strong> Google Cloud Run</li>
           </ul>
-
-          <br /><strong>Learning Outcomes:</strong><br />
-          This project enhanced my understanding of game development principles,
-          algorithm optimization, real-time web technologies, and user
-          experience design for interactive applications.
         </div>
         <div class="modal-btn-container">
           <a
@@ -774,73 +703,51 @@
           <span class="modal-tech-tag">AI/ML</span>
           <span class="modal-tech-tag">Express.js</span>
           <span class="modal-tech-tag">JWT Auth</span>
+          <span class="modal-tech-tag">Render</span>
         </div>
         <div class="modal-description">
           <strong>Overview:</strong><br />
-          A comprehensive healthcare management platform that streamlines
-          hospital operations through digital solutions. The system integrates
-          patient management, appointment scheduling, inventory tracking, and
-          AI-powered health recommendations to improve healthcare delivery
-          efficiency.
+          The Hospital Management System is a full-stack platform that
+          integrates AI-driven healthcare recommendations with modern mobile and
+          web interfaces. It enables patients, doctors, and administrators to
+          collaborate seamlessly, ensuring efficient healthcare workflows
+          supported by AI and doctor validation.
 
           <br /><br /><strong>Core Features:</strong>
           <ul>
             <li>
-              <strong>Patient Management:</strong> Complete electronic health
-              records with medical history tracking
+              <strong>Patient Mobile App:</strong> View lab data with
+              doctor-approved recommendations and manage appointments.
             </li>
             <li>
-              <strong>Appointment System:</strong> Smart scheduling with
-              conflict resolution and automated reminders
+              <strong>Admin Dashboard:</strong> Upload patient lab data (manual
+              or bulk), manage doctors, departments, and appointments.
             </li>
             <li>
-              <strong>Inventory Management:</strong> Real-time tracking of
-              medical supplies and equipment
-            </li>
-            <li>
-              <strong>AI Health Recommendations:</strong> Machine learning
-              algorithms for diagnosis assistance and treatment suggestions
-            </li>
-            <li>
-              <strong>Multi-role Access:</strong> Separate portals for doctors,
-              patients, nurses, and administrators
-            </li>
-            <li>
-              <strong>Billing Integration:</strong> Automated invoice generation
-              and payment processing
-            </li>
-            <li>
-              <strong>Report Generation:</strong> Comprehensive analytics and
-              reporting tools
+              <strong>Doctor Dashboard:</strong> Review lab results with
+              AI-generated recommendations, refine or override them, and approve
+              final recommendations for patients.
             </li>
           </ul>
 
-          <br /><strong>Technical Architecture:</strong>
+          <br /><strong>Technical Implementation:</strong>
           <ul>
             <li>
-              <strong>Mobile App:</strong> Flutter-based cross-platform
-              application for patients and staff
+              <strong>Backend:</strong> Node.js (API services) + Python
+              (rule-based algorithm)
             </li>
             <li>
-              <strong>Backend API:</strong> Node.js with Express.js for scalable
-              server-side operations
+              <strong>AI:</strong> Google Gemini (processes lab results and
+              generates recommendations)
             </li>
             <li>
-              <strong>Database:</strong> PostgreSQL with complex relational
-              schemas for medical data
+              <strong>Mobile App:</strong> Flutter (Clean Architecture + BLoC
+              for state management)
             </li>
             <li>
-              <strong>AI Integration:</strong> Python-based machine learning
-              models for health predictions
+              <strong>Web Frontend:</strong> ReactJS (Admin & Doctor dashboards)
             </li>
-            <li>
-              <strong>Security:</strong> HIPAA-compliant data handling with
-              encrypted storage and transmission
-            </li>
-            <li>
-              <strong>Real-time Features:</strong> WebSocket implementation for
-              live updates and notifications
-            </li>
+            <li><strong>Database:</strong> PostgreSQL (hosted on Render)</li>
           </ul>
 
           <br /><strong>Project Impact:</strong><br />
@@ -880,81 +787,43 @@
           <span class="modal-tech-tag">Flutter</span>
           <span class="modal-tech-tag">Dart</span>
           <span class="modal-tech-tag">Firebase</span>
-          <span class="modal-tech-tag">Stripe API</span>
           <span class="modal-tech-tag">Google Maps</span>
         </div>
         <div class="modal-description">
           <strong>Overview:</strong><br />
-          A comprehensive mobile application designed to digitize restaurant
-          operations from order management to delivery tracking. The app serves
-          both restaurant staff and customers, providing a seamless dining and
-          management experience.
+          The Restaurant App is a mobile restaurant management system developed
+          as a second-year Mobile Application Project. It streamlines operations
+          across three key roles — Waiter, Chef (Kitchen), and Cashier —
+          improving coordination and efficiency with real-time updates.
 
           <br /><br /><strong>Key Features:</strong>
           <ul>
             <li>
-              <strong>Digital Menu Management:</strong> Dynamic menu updates
-              with photos, descriptions, and pricing
+              <strong>Chef (Kitchen):</strong> View incoming orders, update
+              status (e.g., In Progress, Ready to Serve), and notify waiters
+              when food is prepared.
             </li>
             <li>
-              <strong>Order Processing:</strong> Real-time order management with
-              kitchen display system integration
+              <strong>Waiter:</strong> Take customer orders, track order status,
+              and receive notifications when dishes are ready.
             </li>
             <li>
-              <strong>Payment Integration:</strong> Multiple payment options
-              including digital wallets and card payments
-            </li>
-            <li>
-              <strong>Table Management:</strong> QR code-based table service and
-              reservation system
-            </li>
-            <li>
-              <strong>Delivery Tracking:</strong> GPS-based real-time delivery
-              tracking for customers
-            </li>
-            <li>
-              <strong>Inventory Alerts:</strong> Automated notifications for
-              low-stock items
-            </li>
-            <li>
-              <strong>Analytics Dashboard:</strong> Sales reports, popular items
-              analysis, and performance metrics
+              <strong>Cashier:</strong> Manage orders, handle billing &
+              checkout, and oversee customer reservations.
             </li>
           </ul>
 
           <br /><strong>Technical Features:</strong>
           <ul>
             <li>
-              <strong>Cross-platform Development:</strong> Single codebase for
-              both iOS and Android using Flutter
+              <strong>Frontend (Mobile):</strong> Flutter (cross-platform
+              development)
             </li>
             <li>
-              <strong>Real-time Database:</strong> Firebase Firestore for live
-              order updates and synchronization
-            </li>
-            <li>
-              <strong>Payment Processing:</strong> Secure integration with
-              Stripe API for transaction handling
-            </li>
-            <li>
-              <strong>Location Services:</strong> Google Maps integration for
-              delivery tracking and restaurant locator
-            </li>
-            <li>
-              <strong>Push Notifications:</strong> Firebase Cloud Messaging for
-              order updates and promotions
-            </li>
-            <li>
-              <strong>Offline Capability:</strong> Local data caching for
-              seamless operation during network issues
+              <strong>Backend Services:</strong> Firebase (Authentication,
+              Firestore Database)
             </li>
           </ul>
-
-          <br /><strong>User Experience:</strong><br />
-          The app features an intuitive interface designed for both tech-savvy
-          and non-technical users. The staff interface prioritizes efficiency
-          and speed, while the customer interface focuses on visual appeal and
-          ease of navigation.
         </div>
         <div class="modal-btn-container">
           <a
@@ -986,51 +855,34 @@
         <div class="modal-tech-stack">
           <span class="modal-tech-tag">Flutter</span>
           <span class="modal-tech-tag">Firebase</span>
-          <span class="modal-tech-tag">Node.js</span>
           <span class="modal-tech-tag">PostgreSQL</span>
-          <span class="modal-tech-tag">QR Scanner</span>
-          <span class="modal-tech-tag">Push Notifications</span>
+          <span class="modal-tech-tag">Strapi</span>
         </div>
         <div class="modal-description">
           <strong>Overview:</strong><br />
-          A comprehensive smart campus application designed to enhance the
-          university experience for students, faculty, and staff. The app
-          integrates various campus services into a single platform, making
-          campus life more convenient and connected.
+          The Smart Campus Mobile App enhances the student experience by
+          centralizing essential university services. From schedules to
+          navigation and document requests, it makes campus life more convenient
+          and connected.
 
           <br /><br /><strong>Key Features:</strong>
           <ul>
             <li>
-              <strong>Digital Student ID:</strong> QR code-based identification
-              for library, cafeteria, and building access
+              <strong>Class Schedules:</strong> View personalized timetables and
+              stay updated on upcoming classes.
             </li>
             <li>
-              <strong>Class Scheduling:</strong> Integrated timetable with
-              classroom locations and instructor information
+              <strong>Interactive Campus Map:</strong> Easily navigate campus
+              landmarks such as buildings, dormitories, cafeterias, and
+              facilities.
             </li>
             <li>
-              <strong>Campus Navigation:</strong> Interactive campus map with
-              indoor navigation and facility locator
+              <strong>Document Requests:</strong> Submit official requests for
+              transcripts, certificates, and more directly in the app.
             </li>
             <li>
-              <strong>Event Management:</strong> Campus events calendar with
-              registration and notification system
-            </li>
-            <li>
-              <strong>Food Services:</strong> Cafeteria menus, pre-ordering, and
-              nutritional information
-            </li>
-            <li>
-              <strong>Library Integration:</strong> Book search, reservation,
-              and availability checking
-            </li>
-            <li>
-              <strong>Announcement System:</strong> Real-time campus-wide and
-              department-specific notifications
-            </li>
-            <li>
-              <strong>Student Services:</strong> Access to grades, transcripts,
-              and administrative services
+              <strong>AI Chatbot:</strong> Gemini-powered chatbot that provides
+              instant answers to student inquiries.
             </li>
           </ul>
 
@@ -1040,43 +892,14 @@
               <strong>Mobile Development:</strong> Flutter framework for
               consistent cross-platform experience
             </li>
+            <li><strong>Backend (CMS):</strong> Strapi</li>
             <li>
-              <strong>Backend Services:</strong> Node.js with Express.js for API
-              development and data processing
-            </li>
-            <li>
-              <strong>Database Management:</strong> PostgreSQL for structured
-              data and Firebase for real-time features
-            </li>
-            <li>
-              <strong>QR Code Integration:</strong> Custom QR scanner for
-              various campus authentication needs
-            </li>
-            <li>
-              <strong>Push Notifications:</strong> Firebase Cloud Messaging for
-              timely campus updates
+              <strong>Database & Authentication</strong> Firebase Firestore
             </li>
             <li>
               <strong>Maps Integration:</strong> Custom indoor mapping solution
               with GPS coordination
             </li>
-            <li>
-              <strong>Security:</strong> JWT-based authentication with
-              university SSO integration
-            </li>
-          </ul>
-
-          <br /><strong>User Impact:</strong><br />
-          The app significantly reduced paper waste on campus and improved
-          communication between administration and students. Beta testing showed
-          90% user satisfaction and 40% reduction in administrative queues.
-
-          <br /><strong>Challenges Overcome:</strong>
-          <ul>
-            <li>Integration with legacy university systems and databases</li>
-            <li>Offline functionality for areas with poor network coverage</li>
-            <li>Scalability to handle peak usage during enrollment periods</li>
-            <li>Privacy concerns and FERPA compliance for student data</li>
           </ul>
         </div>
         <div class="modal-btn-container">

@@ -19,6 +19,12 @@
     flex: 0 0 320px;
     min-width: 320px;
     max-width: 320px;
+    height: 450px;
+  }
+
+  .project-title {
+    height: 80px; /* ADJUSTED: Proportionally smaller */
+    font-size: 1.3rem;
   }
 }
 
@@ -97,6 +103,12 @@
     flex: 0 0 350px; /* Each card is 350px wide */
     min-width: 350px;
     max-width: 350px;
+    height: 420px;
+  }
+
+  .project-title {
+    height: 50px; /* ADJUSTED: Smaller title height */
+    font-size: 1.3rem; /* ADJUSTED: Smaller font size */
   }
 
   /* Make scrollbar more visible */
@@ -148,6 +160,16 @@
     flex: 0 0 280px;
     min-width: 280px;
     max-width: 280px;
+    height: 400px;
+  }
+
+  .project-title {
+    height: 50px; /* ADJUSTED: Even smaller */
+    font-size: 1.2rem;
+  }
+
+  .project-img {
+    height: 250px; /* ADJUSTED: Smaller image */
   }
 
   #projects .about-containers {
@@ -183,7 +205,7 @@
   }
 
   .modal-content {
-    margin: 5% auto;
+    margin: 1.75% auto;
     padding: 1.5rem;
     width: 85%;
     max-height: 90vh;
@@ -286,7 +308,21 @@
     flex: 0 0 220px;
     min-width: 220px;
     max-width: 220px;
+    height: 360px;
   }
+
+  .project-title {
+    height: 70px; /* ADJUSTED: Compact mobile title */
+    font-size: 1rem;
+    margin: 0.8rem;
+  }
+
+  .project-img {
+    height: 200px; /* ADJUSTED: Smaller mobile image */
+  }
+
+
+
 
   /* Improve scrollbar visibility on mobile for projects */
   #projects .about-containers::-webkit-scrollbar {
@@ -344,7 +380,7 @@
   }
 
   .modal-content {
-    margin: 4% auto; /* Maintain margins instead of 1% */
+    margin: 1.02% auto; /* Maintain margins instead of 1% */
     padding: 1.5rem;
     width: 80%; /* Changed from calc(100vw - 1rem) to maintain spacing */
     max-width: none;
@@ -369,6 +405,15 @@
     height: 35px;
   }
 
+  .project-btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+    min-width: 100px;
+  }
+
+  .project-click-hint {
+    bottom: 4rem; /* ADJUSTED: Account for smaller button */
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -399,19 +444,19 @@
   }
 
   .project-img {
-    width: 85%;
-    height: 85%;
+    height: 185px;
   }
 
   .project-title {
+    height: 50px;
     font-size: 1rem;
     margin: 0.8rem;
   }
 
   .project-btn {
-    padding: 0.8rem;
-    width: 7rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+    min-width: 90px;
   }
 
   .modal {
@@ -419,7 +464,7 @@
   }
 
   .modal-content {
-    margin: 3% auto; /* Maintain proper top/bottom margin */
+    margin: auto auto; /* Maintain proper top/bottom margin */
     padding: 1rem;
     width: 75%; /* Reduced from 85% to give more side spacing */
     max-width: none;
