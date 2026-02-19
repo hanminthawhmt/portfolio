@@ -47,7 +47,7 @@ function toggleMenu(){
 
 const typingText = document.getElementById("typing-text");
 
-      const texts = ["Flutter Developer", "Full-Stack Developer"];
+      const texts = ["Backend Developer", "Flutter Developer"];
       let textIndex = 0;
       let charIndex = 0;
       let isDeleting = false;
