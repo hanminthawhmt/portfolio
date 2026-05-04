@@ -3,73 +3,45 @@
     height: 83vh;
     margin-bottom: 6rem;
   }
+
   .about-containers {
     flex-wrap: wrap;
   }
 
-  /* Keep projects horizontal on larger tablets with better spacing */
-  #projects .about-containers {
-    flex-wrap: nowrap;
-    max-width: 1200px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  #projects .details-container {
-    flex: 0 0 320px;
-    min-width: 320px;
-    max-width: 320px;
-    height: 450px;
-  }
-
-  .project-title {
-    height: 80px; /* ADJUSTED: Proportionally smaller */
-    font-size: 1.3rem;
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 1200px) {
-  /* Prevent horizontal page scroll but allow it in specific containers */
   body {
-    overflow-x: hidden;
-  }
-
-  html {
     overflow-x: hidden;
   }
 
   #desktop-nav {
     display: none;
   }
+
   #hamburger-nav {
     display: flex;
-  }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
-
-  section,
-  .section-container {
-    height: fit-content;
   }
 
   section {
     margin: 0 5%;
-    overflow-x: visible; /* Allow overflow within sections */
+    height: fit-content;
   }
 
-  /* Ensure projects section can contain its horizontal scroll */
-  #projects {
-    overflow-x: visible;
-    overflow-y: visible;
+  .section-container {
+    display: block;
+    height: fit-content;
+  }
+
+  #profile {
+    display: block;
+  }
+
+  .arrow {
+    display: none;
   }
 
   .section__pic-container {
@@ -82,126 +54,103 @@
     margin-top: 0;
   }
 
-  /* PROJECTS SECTION: Force horizontal scroll in the 1200-601px range */
-  #projects .about-containers {
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    width: 600px; /* Fixed width smaller than content */
-    max-width: 80vw; /* Responsive fallback */
-    box-sizing: border-box;
-    display: flex;
-    gap: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 1rem;
-    margin: 0 auto;
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  #projects .details-container {
-    flex: 0 0 350px; /* Each card is 350px wide */
-    min-width: 350px;
-    max-width: 350px;
-    height: 420px;
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
   }
 
-  .project-title {
-    height: 50px; /* ADJUSTED: Smaller title height */
-    font-size: 1.3rem; /* ADJUSTED: Smaller font size */
+  .modal-content {
+    margin: 1.75% auto;
+    padding: 1.5rem;
+    width: 85%;
+    max-height: 90vh;
   }
 
-  /* Make scrollbar more visible */
-  #projects .about-containers::-webkit-scrollbar {
-    height: 12px;
+  .modal-title {
+    font-size: 1.8rem;
   }
 
-  #projects .about-containers::-webkit-scrollbar-track {
-    background: rgba(240, 240, 240, 1);
-    border-radius: 6px;
-    border: 1px solid rgba(200, 200, 200, 0.5);
+  .modal-project-image {
+    height: 200px;
   }
 
-  #projects .about-containers::-webkit-scrollbar-thumb {
-    background: rgba(100, 100, 100, 0.8);
-    border-radius: 6px;
-    border: 1px solid rgba(80, 80, 80, 0.3);
+  .modal-btn-container {
+    flex-direction: column;
   }
 
-  #projects .about-containers::-webkit-scrollbar-thumb:hover {
-    background: rgba(80, 80, 80, 1);
+  .modal-close {
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  /* Prevent horizontal page scroll but allow container scrolling */
   body {
     overflow-x: hidden;
   }
 
-  /* About section for medium tablets */
-  #about .details-container {
-    flex: 0 0 250px;
-    min-width: 250px;
-    max-width: 250px;
+  section {
+    margin: 0 1.5rem;
+    height: fit-content;
   }
 
-  #about .about-containers {
-    gap: 1.5rem;
-    padding-right: 2rem;
-    overflow-x: scroll !important;
-    overflow-y: hidden !important;
+  #profile {
+    height: auto;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .section__pic-container {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .section-container {
+    flex-direction: column;
+  }
+
+  .about-containers {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    overflow: visible !important;
+  }
+
+  #about-containers {
+    flex-direction: column !important;
+  }
+
+  .about-pic {
     width: 100%;
-    box-sizing: border-box;
-  }
-
-  /* Projects section for medium tablets */
-  #projects .details-container {
-    flex: 0 0 280px;
-    min-width: 280px;
     max-width: 280px;
-    height: 400px;
+    margin: 0 auto;
+    display: block;
   }
 
-  .project-title {
-    height: 50px; /* ADJUSTED: Even smaller */
-    font-size: 1.2rem;
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 
-  .project-img {
-    height: 250px; /* ADJUSTED: Smaller image */
+  .experience-sub-title {
+    font-size: 1.25rem;
   }
 
-  #projects .about-containers {
-    gap: 1.5rem;
-    padding-right: 2rem;
-    overflow-x: scroll !important;
-    overflow-y: hidden !important;
-    width: 100%;
-    box-sizing: border-box;
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  /* Ensure scrollbar is visible on medium tablets for both sections */
-  #about .about-containers::-webkit-scrollbar,
-  #projects .about-containers::-webkit-scrollbar {
-    height: 10px;
-  }
-
-  #about .about-containers::-webkit-scrollbar-track,
-  #projects .about-containers::-webkit-scrollbar-track {
-    background: rgba(240, 240, 240, 0.9);
-    border-radius: 5px;
-  }
-
-  #about .about-containers::-webkit-scrollbar-thumb,
-  #projects .about-containers::-webkit-scrollbar-thumb {
-    background: rgba(120, 120, 120, 0.9);
-    border-radius: 5px;
-  }
-
-  #about .about-containers::-webkit-scrollbar-thumb:hover,
-  #projects .about-containers::-webkit-scrollbar-thumb:hover {
-    background: rgba(100, 100, 100, 1);
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
   }
 
   .modal-content {
@@ -231,159 +180,77 @@
 }
 
 @media screen and (max-width: 600px) {
-  /* Prevent horizontal page scroll completely */
   body {
     overflow-x: hidden;
     width: 100vw;
     max-width: 100vw;
   }
 
-  /* Ensure all sections stay within viewport */
   section {
-    margin: 0 5%;
-    width: 90vw;
-    max-width: 90vw;
+    margin: 0 1rem;
+    width: auto;
     box-sizing: border-box;
   }
 
-  #contact,
-  footer {
-    height: 40vh;
-  }
   #profile {
-    height: 83vh;
+    height: auto;
     margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-
-  /* About section mobile - enable stacking */
-  #about .about-containers {
-    flex-wrap: wrap !important;
-    overflow-x: visible !important;
-    overflow-y: visible !important;
-    gap: 1rem;
-    padding-right: 0;
-    width: 100%;
-  }
-
-  #about .details-container {
-    flex: 1 1 auto;
-    min-width: auto;
-    max-width: none;
-  }
-
-  /* Force projects to scroll within container only */
-  #projects {
-    overflow: visible;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  #projects .about-containers {
-    flex-wrap: nowrap !important;
-    overflow-x: scroll !important;
-    overflow-y: hidden !important;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    gap: 1rem;
-    padding-right: 2rem;
-    width: calc(90vw - 2rem);
-    max-width: calc(90vw - 2rem);
-    box-sizing: content-box;
-    position: relative;
-    display: flex;
-  }
-
-  #projects .details-container {
-    flex: 0 0 220px;
-    min-width: 220px;
-    max-width: 220px;
-    height: 360px;
-  }
-
-  .project-title {
-    height: 70px; /* ADJUSTED: Compact mobile title */
-    font-size: 1rem;
-    margin: 0.8rem;
-  }
-
-  .project-img {
-    height: 200px; /* ADJUSTED: Smaller mobile image */
-  }
-
-
-
-
-  /* Improve scrollbar visibility on mobile for projects */
-  #projects .about-containers::-webkit-scrollbar {
-    height: 8px;
-  }
-
-  #projects .about-containers::-webkit-scrollbar-track {
-    background: rgba(240, 240, 240, 0.8);
-    border-radius: 4px;
-  }
-
-  #projects .about-containers::-webkit-scrollbar-thumb {
-    background: rgba(120, 120, 120, 0.8);
-    border-radius: 4px;
-  }
-
-  #projects .about-containers::-webkit-scrollbar-thumb:hover {
-    background: rgba(100, 100, 100, 0.9);
-  }
-
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-
-  .section__text__p2 {
-    font-size: 1.25rem;
   }
 
   .title {
     font-size: 2rem;
   }
 
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  article {
+    font-size: 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+
+  .contact-info-container {
+    margin: 0;
+  }
+
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
   .text-container {
     text-align: justify;
   }
 
+  #contact,
+  footer {
+    height: auto;
+  }
+
   .modal-content {
-    margin: 1.02% auto; /* Maintain margins instead of 1% */
+    margin: 2% auto;
     padding: 1.5rem;
-    width: 80%; /* Changed from calc(100vw - 1rem) to maintain spacing */
-    max-width: none;
+    width: 88%;
     max-height: 92vh;
     border-radius: 12px;
   }
@@ -404,70 +271,27 @@
     width: 35px;
     height: 35px;
   }
-
-  .project-btn {
-    padding: 0.7rem 1rem;
-    font-size: 0.85rem;
-    min-width: 100px;
-  }
-
-  .project-click-hint {
-    bottom: 4rem; /* ADJUSTED: Account for smaller button */
-  }
 }
 
 @media screen and (max-width: 480px) {
-  /* Extra small mobile devices */
   body {
     overflow-x: hidden;
   }
 
   section {
-    margin: 0 3%;
-    width: 94vw;
-    max-width: 94vw;
+    margin: 0 0.75rem;
   }
 
-  #projects .details-container {
-    flex: 0 0 200px;
-    min-width: 200px;
-    max-width: 200px;
-  }
-
-  #projects .about-containers {
-    gap: 0.8rem;
-    padding-right: 1.5rem;
-    overflow-x: scroll !important;
-    overflow-y: hidden !important;
-    width: calc(94vw - 2rem);
-    max-width: calc(94vw - 2rem);
-  }
-
-  .project-img {
-    height: 185px;
-  }
-
-  .project-title {
-    height: 50px;
-    font-size: 1rem;
-    margin: 0.8rem;
-  }
-
-  .project-btn {
-    padding: 0.6rem 0.8rem;
+  .btn {
+    width: 6.5rem;
+    padding: 0.75rem;
     font-size: 0.8rem;
-    min-width: 90px;
-  }
-
-  .modal {
-    padding: 0.5rem; /* Add padding to modal container */
   }
 
   .modal-content {
-    margin: auto auto; /* Maintain proper top/bottom margin */
+    margin: auto;
     padding: 1rem;
-    width: 75%; /* Reduced from 85% to give more side spacing */
-    max-width: none;
+    width: 88%;
     max-height: 94vh;
     border-radius: 8px;
   }
@@ -491,10 +315,6 @@
     line-height: 1.5;
   }
 
-  .modal-description li {
-    font-size: 0.8rem;
-  }
-
   .modal-btn {
     padding: 0.7rem 0.8rem;
     font-size: 0.85rem;
@@ -503,7 +323,6 @@
   .modal-close {
     right: 0.8rem;
     top: 0.8rem;
-    font-size: 1.6rem;
     width: 30px;
     height: 30px;
   }
