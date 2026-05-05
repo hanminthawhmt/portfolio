@@ -35,7 +35,32 @@
   }
 
   #profile {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 3rem;
+    gap: 2rem;
+  }
+
+  #profile .section__pic-container {
+    width: 250px !important;
+    height: 250px !important;
+    min-width: 250px !important;
+    min-height: 250px !important;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex !important;
+    flex-shrink: 0;
+    margin: 0 auto;
+  }
+
+  #profile .section__pic-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center top;
+    display: block !important;
   }
 
   .arrow {
@@ -93,10 +118,30 @@
   #profile {
     height: auto;
     padding-bottom: 3rem;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+  }
+
+  #profile .section__pic-container {
+    width: 200px !important;
+    height: 200px !important;
+    min-width: 200px !important;
+    min-height: 200px !important;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex !important;
+    flex-shrink: 0;
+    margin: 0 auto !important;
+  }
+
+  #profile .section__pic-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center top;
+    display: block !important;
   }
 
   .section-container {
@@ -117,11 +162,12 @@
   }
 
   #about .section__pic-container {
-    width: 220px;
-    height: 260px;
+    width: 220px !important;
+    height: 260px !important;
     margin: 0 auto 1.5rem auto;
     border-radius: 2rem;
     overflow: hidden;
+    display: flex !important;
   }
 
   .about-pic {
@@ -129,12 +175,6 @@
     height: 100%;
     object-fit: cover;
     object-position: center top;
-  }
-
-  .section__pic-container {
-    width: 220px;
-    height: 220px;
-    margin: 0 auto;
   }
 
   .projects-grid {
@@ -184,10 +224,23 @@
     font-size: 1.25rem;
   }
 
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+  #profile .section__pic-container {
+    width: 180px !important;
+    height: 180px !important;
+    min-width: 180px !important;
+    min-height: 180px !important;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex !important;
+    margin: 0 auto !important;
+  }
+
+  #profile .section__pic-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center top;
+    display: block !important;
   }
 
   #about .section__pic-container {
