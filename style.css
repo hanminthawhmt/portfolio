@@ -4,14 +4,17 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 p {
@@ -361,7 +364,7 @@ article {
 article div h3 {
   font-size: 1rem;
   font-weight: 500;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 article .icon {
@@ -750,95 +753,4 @@ footer p {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-/* @media screen and (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-} */
-
-@media screen and (max-width: 768px) {
-  #desktop-nav {
-    display: none;
-  }
-
-  #hamburger-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 17vh;
-    padding: 0 1.5rem;
-  }
-
-  section {
-    margin: 0 1.5rem;
-    padding-top: 3vh;
-  }
-
-  #profile {
-    flex-direction: column;
-    gap: 2rem;
-    height: auto;
-    padding-bottom: 3rem;
-    align-items: center;
-  }
-
-  .section__pic-container {
-    width: 220px;
-    height: 220px;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-
-  .section-container {
-    flex-direction: column;
-  }
-
-  .about-containers {
-    flex-direction: column;
-  }
-
-  .experience-details-container .about-containers {
-    flex-direction: column;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .arrow {
-    display: none;
-  }
-
-  .contact-info-upper-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  section {
-    margin: 0 1rem;
-  }
-
-  .title {
-    font-size: 1.75rem;
-  }
-
-  .btn {
-    width: 7rem;
-    padding: 0.8rem;
-    font-size: 0.85rem;
-  }
-}
